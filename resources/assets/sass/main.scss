@@ -154,3 +154,18 @@ header {
         background-image: url(../img/img-3.jpg);
     }
 }
+
+#counter-section{
+    background-color: #95e1d3;
+    .counter-number-text{
+        color: #fff;
+        span{
+            font-size: 60px;
+            font-weight: 800;
+        }
+        h6{
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+}
