@@ -1,0 +1,156 @@
+/* Colors */
+$primary-color: #333333;
+
+/* Includes */
+@import 'mixins';
+@import 'bootstrap/bootstrap.scss';
+@import 'icons';
+@import 'reusable';
+
+/* Global style */
+
+body,html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+
+/* Navbar */
+
+header {
+    nav {
+        background: #f38181;
+        .navbar-brand{
+            font-weight: 800;
+            font-size: 30px;
+        }
+        .navbar-nav {
+            .nav-item {
+                display: flex;
+                justify-content: center;
+                a {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    color: #fff!important;
+                    font-weight: 500;
+                }
+            }
+            .active{
+                a{
+                   color: #fce38a!important;
+                   border-bottom: 2px solid #fce38a;
+                }
+            }
+        }
+    }
+}
+
+
+/* Hero section */
+
+#hero-section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    &:before{
+        content: '';
+        position: absolute;
+        opacity: 0.9;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: #f38181; /* Old browsers */
+        background: -moz-linear-gradient(top, #f38181 0%, #fce38a 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #f38181 0%,#fce38a 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #f38181 0%,#fce38a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f38181', endColorstr='#fce38a',GradientType=0 ); /* IE6-9 */
+    }
+    .hero-text{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+        h2{
+            font-family: 'Kaushan Script', cursive;
+            font-size: 40px;
+        }
+        h1{
+            position: relative;
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 60px;
+            text-transform: uppercase;
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50px;
+                height: 2px;
+                background-color: #fff;
+            }
+        }
+        .hero-btn{
+            border: 3px solid #fff;
+            width: 160px;
+            height: 40px;
+            margin: 0 auto;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 40px;
+            border-radius: 0;
+            @include transition(all .3s ease-out);
+            &:hover{
+                background-color: #fff;
+                color: $primary-color;   
+            }
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+#about-us{
+    .block-img{
+        width: 100%;
+        height: 250px;
+        background-position: center center;
+        background-size: cover;
+        margin-top: 30px;
+    }
+    .block-1{
+        background-image: url(../img/img-1.jpg);
+    }
+    .block-2{
+        background-image: url(../img/img-2.jpg);
+    }
+    .block-3{
+        background-image: url(../img/img-3.jpg);
+    }
+}
