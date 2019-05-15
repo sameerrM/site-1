@@ -31,6 +31,44 @@ p {
 header {
     nav {
         background: #f38181;
+        .navbar-toggler{
+            border-color: transparent !important;
+            margin-right: -14px;
+            &:focus{
+              outline: none;
+            }
+          
+            .menu-custom,
+            .menu-custom:before,
+            .menu-custom:after{
+              content: '';
+              display: block;
+              background: #fff;
+              height: 3px;
+              width: 30px;
+              transition: all ease-in-out 200ms;
+            }
+          
+            .menu-custom:before{
+              transform: translateY(-8px);
+            }
+            .menu-custom:after{
+              transform: translateY(5px);
+            }
+          }
+          
+          .menu-open{
+            .menu-custom{
+              transform: rotate(45deg);
+            }
+            .menu-custom:before{
+              opacity: 0;
+            }
+          
+            .menu-custom:after{
+              transform: translateY(-3px) rotate(-90deg);
+            }
+        }
         .navbar-brand{
             font-weight: 800;
             font-size: 30px;
@@ -166,6 +204,35 @@ header {
         h6{
             font-size: 14px;
             text-transform: uppercase;
+        }
+    }
+}
+
+#services{
+    .services-info{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .services-img{
+            i{
+                color: #95e1d3;
+                font-size: 40px;
+            }
+        }
+        .services-desc{
+            text-align: center;
+            h5{
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            p{
+                color: #999999;
+                font-size: 15px;
+                line-height: 20px;
+            }
         }
     }
 }
