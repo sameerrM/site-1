@@ -28,5 +28,14 @@ $(function() {
 
     $('.parallax-window').parallax({imageSrc: 'assets/img/bg-parallax.jpg'});
 
-	$('.blog-info p').matchHeight();
+    $('.blog-info p').matchHeight();
+    
+    $('.navbar-nav').onePageNav({
+        currentClass: 'active',
+        changeHash: false,
+        scrollSpeed: 750,
+        scrollThreshold: 0.5,
+        filter: '',
+        easing: 'swing'
+    });
 });
