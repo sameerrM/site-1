@@ -1,3 +1,8 @@
+(function($){
+    $(window).on("load",function(){
+        $(".card-body").mCustomScrollbar();
+    });
+})(jQuery);
 
 $(function() {
     
