@@ -30,6 +30,9 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
+                <a class="nav-link" href="#hero-section">Home</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#about-us">About</a>
             </li>
             <li class="nav-item">
@@ -55,7 +58,7 @@
     <div class="hero-text">
       <h2>Creative site</h2>
       <h1>Welcome to Dogo</h1>
-      <button class="btn hero-btn">Read more</button>
+      <button class="btn hero-btn" href="#about-us">Read more</button>
     </div>
   </section>
   <!-- end: hero-section -->
@@ -218,7 +221,7 @@
   </section>
   <!-- end: design-section -->
   <!-- start: what we do section -->
-  <section class="space-section" id="what-we-do">
+  <section class="space-section d-none d-md-block" id="what-we-do">
     <div class="container">
       <div class="heading-text-section">
         <h4>Service</h4>
@@ -282,12 +285,84 @@
     </div>
   </section>
   <!-- end: what we do section -->
-  <!-- start: call to action section -->
-  <section class="parallax-window" id="parallax" data-parallax="scroll" data-image-src="assets/img/bg-parallax.jpg">
+  <!-- start: parallax section -->
+  <section class="parallax-window" id="parallax">
     <div class="silver-overlay"></div>
     <h3>Call to action !</h3>
   </section>
-  <!-- end: call to action section -->
+  <!-- end: parallax section -->
+  <!-- start: team section -->
+  <section class="space-section d-none d-md-block" id="team">
+    <div class="container">
+        <div class="heading-text-section">
+          <h4>Who we are</h4>
+          <h3>Meet our team</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+      <div class="row mt-spc">
+        <div class="col-md-4">
+            <div class="member-box">
+              <div class="member-img">
+                <img src="assets/img/member-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info text-center">
+                <h5>Matthew Dix</h5>
+                <p>Graphic design</p>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="member-box">
+              <div class="member-img">
+                <img src="assets/img/member-2.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info text-center">
+                <h5>Christopher Campbell</h5>
+                <p>Branding/UX design</p>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="member-box">
+              <div class="member-img">
+                <img src="assets/img/member-3.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info text-center">
+                <h5>Michael Fertig</h5>
+                <p>Developer</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end: team section -->
+  <!-- start: sponsor section -->
+  <section class="d-none d-md-block" id="sponsor-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 text-center">
+          <img src="assets/img/sponsore-1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-2 text-center">
+          <img src="assets/img/sponsore-2.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-2 text-center">
+          <img src="assets/img/sponsore-3.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-2 text-center">
+          <img src="assets/img/sponsore-4.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-2 text-center">
+          <img src="assets/img/sponsore-5.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-2 text-center">
+          <img src="assets/img/sponsore-6.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end: sponsor section -->
   <!-- start: work-section -->
   <section class="space-section" id="work-section">
     <div class="container">
@@ -321,8 +396,16 @@
             </div>
             <!-- end: left-gallery -->
             <!-- start: right-gallery -->
-            <div class="col-12 col-md-6">
-
+            <div class="d-none d-md-block col-md-6">
+                <div class="row no-gutters">
+                    <div class="col-6">
+                      <img src="assets/img/work-5.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-6">
+                      <img src="assets/img/work-6.jpg" class="img-fluid" alt="">
+                      <img src="assets/img/work-7.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
             </div>
             <!-- end: right-gallery -->
           </div>
@@ -330,8 +413,52 @@
     </div>
   </section>
   <!-- end: work-section -->
+  <!-- start: testimonials-section -->
+  <section class="d-none d-md-block" id="testimonials">
+    <div class="container">
+        <div class="owl-carousel">
+          <div class="profile-info">
+            <div class="profile-img">
+              <img src="assets/img/profile-1.png" alt="">
+            </div>
+            <div class="profile-text">
+              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+              <span class="profile-name">Joshua Earle</span>
+            </div>
+          </div>
+          <div class="profile-info">
+            <div class="profile-img">
+              <img src="assets/img/profile-1.png" alt="">
+            </div>
+            <div class="profile-text">
+              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+              <span class="profile-name">Joshua Earle</span>
+            </div>
+          </div>
+          <div class="profile-info">
+            <div class="profile-img">
+              <img src="assets/img/profile-1.png" alt="">
+            </div>
+            <div class="profile-text">
+              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+              <span class="profile-name">Joshua Earle</span>
+            </div>
+          </div>
+          <div class="profile-info">
+            <div class="profile-img">
+              <img src="assets/img/profile-1.png" alt="">
+            </div>
+            <div class="profile-text">
+              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+              <span class="profile-name">Joshua Earle</span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- end: testimonials-section -->
   <!-- start: blog-section -->
-  <section class="space-section pt-0" id="blog-section">
+  <section class="space-section" id="blog-section">
     <div class="container">
       <div class="heading-text-section">
           <h4>Our stories</h4>
@@ -415,7 +542,7 @@
   <footer class="space-section" id="contact-section">
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 col-md-6">
           <div class="subscribe-section">
             <div class="sub-text">
               <h2>DoGo</h2>

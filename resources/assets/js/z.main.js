@@ -31,8 +31,6 @@ $(function() {
         $(this).toggleClass('menu-open');
     });
 
-    $('.parallax-window').parallax({imageSrc: 'assets/img/bg-parallax.jpg'});
-
     $('.blog-info p').matchHeight();
     
     $('.navbar-nav').onePageNav({
@@ -43,4 +41,27 @@ $(function() {
         filter: '',
         easing: 'swing'
     });
+
+    $(".owl-carousel").owlCarousel({
+        items:1,
+        loop:true,
+        autoplay:false,
+        autoplayTimeout: 10000,
+        responsiveClass: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            768:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
+   
 });
