@@ -21,7 +21,7 @@ gulp.task('scripts', function() {
 
 // Compile CSS from SASS
 gulp.task('sass', function() {
-    return gulp.src(src + 'sass/main.scss')
+    return gulp.src(src + 'sass/app.scss')
     // .pipe(autoprefixer({
     //     browsers: ['last 2 versions'],
     //     cascade: false
