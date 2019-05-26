@@ -75,7 +75,10 @@ header {
       .nav-item {
         display: flex;
         justify-content: center;
-
+        margin: 5px 0;
+        .nav-link{
+          padding: 0.1rem 0;
+        }
         a {
           text-transform: uppercase;
           font-size: 14px;
@@ -144,17 +147,6 @@ header {
       width: 90%;
       margin: 0 auto;
       padding: 20px 0;
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50px;
-        height: 2px;
-        background-color: #fff;
-      }
     }
 
     .mouse {
@@ -223,23 +215,76 @@ header {
 
 #about-us {
   .block-img {
+    position: relative;
     width: 100%;
     height: 250px;
-    background-position: center center;
-    background-size: cover;
     margin-top: 30px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
   }
+  .block-effect{
+    img{
+      max-width: none;
+      width: -webkit-calc(100% + 60px);
+      width: calc(100% + 60px);
+      min-height: 100%;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: translate3d(-50px,0,0);
+      transform: translate3d(-50px,0,0);
+    }
+    .small-content{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
-  .block-1 {
-    background-image: url(../img/img-1.jpg);
-  }
-
-  .block-2 {
-    background-image: url(../img/img-2.jpg);
-  }
-
-  .block-3 {
-    background-image: url(../img/img-3.jpg);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      i{
+        font-size: 20px;
+      }
+      span{
+        font-weight: 600;
+      }
+      i,
+      span{
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-10px,0,0);
+        transform: translate3d(-10px,0,0);
+        text-transform: uppercase;
+        color: #fff;
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-20px,0,0);
+        transform: translate3d(-20px,0,0);
+      }
+    }
+    &:hover img{
+      opacity: 0.2;
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+    &:hover .small-content:before,
+    &:hover .small-content span,
+    &:hover .small-content i{
+      opacity: 1;
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
   }
 }
 
@@ -400,6 +445,63 @@ header {
 
 #team {
   .member-box {
+    .member-img{
+      position: relative;
+      overflow: hidden;
+      img{
+        transition: opacity 0.5s, transform .3s;
+      }
+      .social-wrapp{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+        overflow: hidden;
+      }
+      .team-social-links{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        transform: translateX(-170%);
+        @include transition(all 0.2s ease-out);
+        li{
+          display: inline-block;
+          text-align: center;
+          a{
+            display: block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            background-color: #fce38a;
+            color: #f38181;
+            @include transition(all 0.2s ease-out);
+            &:hover{
+              background-color: #f38181;
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      &:hover{
+        img{
+          opacity: 0.2;
+          transform: scale(1.1);
+        }
+        .social-wrapp{
+         opacity: 1;
+          .team-social-links{
+            transform: translateX(0%);
+          }
+        }
+      }
+    }
     .member-info {
       h5 {
         margin-top: 20px;
@@ -663,9 +765,13 @@ footer {
         li {
           display: inline-block;
           margin: 0 5px;
-
           a {
             color: #95e1d3;
+            @include transition(all 0.2s ease-out);
+            &:hover{
+              text-decoration: none;
+              color: #f38181;
+            }
           }
         }
       }
@@ -736,6 +842,17 @@ footer {
 
       strong {
         color: #95e1d3;
+      }
+    }
+  }
+
+  .img-blog{
+    a{
+      img{
+        transition: opacity 0.3s;
+        &:hover{
+          opacity: 0.5;
+        }
       }
     }
   }
