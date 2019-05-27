@@ -1,11 +1,16 @@
 @media (min-width: 768px) {
   header{
     nav{
+      background: transparent;
+      @include transition(all .3s ease-out);
       .navbar-nav{
         .nav-item{
           margin: 0 10px;
         }
       }
+    }
+    .nav-bg{
+      background: #f38181;
     }
   }
   #hero-section{

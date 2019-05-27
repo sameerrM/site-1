@@ -1,6 +1,18 @@
 
 $(function() {
 
+    $(window).scroll(function() {
+        var nav = $('nav');
+        var top = 100;
+        if ($(window).scrollTop() >= top) {
+
+            nav.addClass('nav-bg');
+
+        } else {
+            nav.removeClass('nav-bg');
+        }
+    });
+
     $(window).on("load",function(){
         $(".card-body").mCustomScrollbar();
     });
