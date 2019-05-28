@@ -1,2 +1,2 @@
-# site-1
-site 1
+# Site-1
+This site is only for presentation!
