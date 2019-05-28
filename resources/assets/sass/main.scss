@@ -311,8 +311,10 @@ header {
     margin-top: 30px;
     text-align: center;
     i {
+      display: block;
       color: #95e1d3;
       font-size: 40px;
+      @include transition(all 0.3s ease-out);
     }
     h5 {
       text-transform: uppercase;
@@ -325,6 +327,12 @@ header {
       color: #999999;
       font-size: 15px;
       line-height: 20px;
+    }
+    &:hover{
+      i {
+        transform: rotateY(180deg);
+        color: #f38181;
+      }
     }
   }
 }
@@ -379,6 +387,7 @@ header {
         &:hover,
         &:focus {
           text-decoration: none;
+          background-color: #f9f9f9;
         }
 
         i {
