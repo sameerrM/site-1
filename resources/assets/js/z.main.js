@@ -1,4 +1,3 @@
-
 $(function() {
 
     $(window).scroll(function() {
@@ -15,6 +14,9 @@ $(function() {
 
     $(window).on("load",function(){
         $(".card-body").mCustomScrollbar();
+        $(".preloader").fadeOut("slow", function () {
+            $(this).remove()
+        });
     });
 
     $(window).scroll(function(){
@@ -28,8 +30,8 @@ $(function() {
     $(".auto-scroll-to-top").click(function(){
         $("html, body").animate({scrollTop: 0}, 600);
     });
-    
-    // Counter number 
+
+    // Counter number
     jQuery(window).scroll(startCounter);
     function startCounter() {
         var hT = jQuery('.counter-number-text').offset().top,
