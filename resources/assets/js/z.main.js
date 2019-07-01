@@ -96,4 +96,8 @@ $(function() {
         var scrollPos = $(document).scrollTop();
         $('.hero-text h1, .hero-text h2').css('opacity', 1 - $(window).scrollTop() / 750);
     })
+
+    lightbox.option({
+        'positionFromTop': 200
+    })
 });
